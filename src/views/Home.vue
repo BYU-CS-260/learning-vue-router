@@ -1,18 +1,41 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<div>
+  <p class="intro">Choose one of our many fine products available for sale.</p>
+  <p class="products">
+    <router-link v-for="product in products" :key="product.id" :to="'/product/' + product.id">
+      <img src="/images/question-marks.png">
+    </router-link>
+  </p>
+</div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import underscore from 'underscore';
 export default {
   name: 'Home',
-  components: {
-    HelloWorld
+  computed: {
+    products() {
+      return underscore.shuffle(this.$root.$data.products);
+    }
   }
 }
 </script>
+
+<style scoped>
+.intro {
+  font-style: italic;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.products img {
+  border: 1px solid #333;
+  height: 50px;
+  width: 40px;
+  margin-left: 10px;
+  object-fit: cover;
+}
+</style>
