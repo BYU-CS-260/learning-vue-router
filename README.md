@@ -19,11 +19,11 @@ npm run serve
 
 You should see this home page:
 
-![Home Page](home-page.png)
+![Home Page](./images/home-page.png)
 
 And when you click on a product page will get something like this:
 
-![Product Page](product.png)
+![Product Page](./images/product.png)
 
 Let's dive in and see how the Vue Router works
 
