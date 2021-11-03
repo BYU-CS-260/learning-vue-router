@@ -1,8 +1,8 @@
 <template>
 <div>
-  <p class="intro">Choose one of our many fine products available for sale.</p>
-  <p class="products">
-    <router-link v-for="product in products" :key="product.id" :to="'/product/' + product.id">
+  <p class="intro">Choose a trivia question to answer!</p>
+  <p class="questions">
+    <router-link v-for="question in questions" :key="question.id" :to="'/product/' + product.id">
       <img src="/images/question-marks.png">
     </router-link>
   </p>
@@ -15,7 +15,7 @@ export default {
   name: 'Home',
   computed: {
     products() {
-      return underscore.shuffle(this.$root.$data.products);
+      return underscore.shuffle(this.$root.$data.questions);
     }
   }
 }
@@ -26,12 +26,12 @@ export default {
   font-style: italic;
 }
 
-.products {
+.questions {
   display: flex;
   flex-wrap: wrap;
 }
 
-.products img {
+.questions img {
   border: 1px solid #333;
   height: 50px;
   width: 40px;

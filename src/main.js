@@ -7,7 +7,7 @@ Vue.config.productionTip = false
 import mock from './mock-data.js'
 
 let data = {
-  products: mock,
+  questions: mock,
 }
 
 new Vue({
