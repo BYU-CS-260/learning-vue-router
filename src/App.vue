@@ -23,6 +23,12 @@ body {
 
 #app {}
 
+@font-face {
+  font-family: 'Korinna';
+  src: url('Korinna-Regular.otf')
+       format('opentype');
+}
+
 h1 {
   font-family: 'Bebas Neue', sans-serif;
   text-align: center;
@@ -35,7 +41,7 @@ h1 {
 }
 
 .footer {
-  padding: 20px;
+  padding: px;
   background-color: #eee;
   text-align: center;
 }
