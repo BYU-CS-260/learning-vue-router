@@ -8,6 +8,7 @@ import mock from './mock-data.js'
 
 let data = {
   questions: mock,
+  money: 0,
 }
 
 new Vue({

@@ -2,6 +2,7 @@
 <div id="app">
   <div class="header">
     <h1>Jeopardy</h1>
+    <p><b>${{this.$root.$data.money}}</b></p>
   </div>
   <div class="content">
     <router-view />
