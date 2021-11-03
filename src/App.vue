@@ -1,7 +1,7 @@
 <template>
 <div id="app">
   <div class="header">
-    <h1>Mystery Product Store</h1>
+    <h1>Jeopardy</h1>
   </div>
   <div class="content">
     <router-view />
@@ -24,7 +24,7 @@ body {
 #app {}
 
 h1 {
-  font-family: 'Mystery Quest', cursive;
+  font-family: 'Bebas Neue', sans-serif;
 }
 
 .content {
