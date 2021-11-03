@@ -2,8 +2,8 @@
 <div>
   <p class="intro">Choose a trivia question to answer!</p>
   <p class="questions">
-    <router-link v-for="question in questions" :key="question.id" :to="'/product/' + product.id">
-      <img src="/images/question-marks.png">
+    <router-link v-for="question in questions" :key="question.id" :to="'/question/' + question.id">
+      <img src="/images/question_card.png">
     </router-link>
   </p>
 </div>
@@ -14,7 +14,7 @@ import underscore from 'underscore';
 export default {
   name: 'Home',
   computed: {
-    products() {
+    questions() {
       return underscore.shuffle(this.$root.$data.questions);
     }
   }
@@ -33,8 +33,8 @@ export default {
 
 .questions img {
   border: 1px solid #333;
-  height: 50px;
-  width: 40px;
+  height: 70px;
+  width: 110px;
   margin-left: 10px;
   object-fit: cover;
 }

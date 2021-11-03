@@ -7,8 +7,8 @@
     <router-view />
   </div>
   <div class="footer">
-    &copy; Mystery Product Store. The mystery is the product. The quantity. The amount.
-    The delivery date. It's <i>all</i> a mystery.
+    <p>Vue Jeopardy by Maura Pierce & Olivia Harrison</p>
+    <a href="https://github.com/livharrison/cp3" target="_blank">Github Repository</a>
   </div>
 </div>
 </template>
@@ -25,6 +25,9 @@ body {
 
 h1 {
   font-family: 'Bebas Neue', sans-serif;
+  text-align: center;
+  font-size: 60px;
+  color: rgb(5,5,149);
 }
 
 .content {
@@ -32,7 +35,8 @@ h1 {
 }
 
 .footer {
-  padding: 30px;
+  padding: 20px;
   background-color: #eee;
+  text-align: center;
 }
 </style>
