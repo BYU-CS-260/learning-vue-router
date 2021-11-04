@@ -13,7 +13,7 @@
         </label><br>
         <textarea v-model="userAnswer" name='answerBox'>Show up</textarea>
         <br>
-        <button type="submit">Submit</button>
+        <button type="submit" v-on:click="updateMoney">Submit</button>
       </form>
     </div>
 
@@ -62,6 +62,15 @@ export default {
       this.$root.$data.studyBank.push(question);
       console.log(question);
     },
+    updateMoney() {
+      let thisMoney = parseInt(this.question.value.substring(1));
+      console.log("This money: " + thisMoney);
+      if (this.userAnswer.toLowerCase() === this.question.answer.toLowerCase()) {
+        this.$root.$data.money += thisMoney;
+      } else {
+        this.$root.$data.money -= thisMoney;
+      }
+    }
   }
 }
 </script>

@@ -2,7 +2,12 @@
 <div id="app">
   <div class="header">
     <h1>Jeopardy</h1>
-    <p><b>${{this.$root.$data.money}}</b></p>
+    <div id="header-items">
+      <router-link to="/"> <p>HOME</p> </router-link>
+      <p><b>${{this.$root.$data.money}}</b></p>
+      <router-link to="/"> <p>STUDY BANK</p> </router-link>
+    </div>
+    <hr>
   </div>
   <div class="content">
     <router-view />
@@ -35,9 +40,24 @@ h1 {
   text-align: center;
   font-size: 60px;
   color: rgb(5,5,149);
+  margin: 40px 0 0 0;
+}
+
+#header-items {
+  font-family: 'Korinna';
+  display: flex;
+  justify-content: space-between;
+  width: 55%;
+  margin: auto;
+}
+
+#header-items p {
+  text-decoration: none;
+  color: black;
 }
 
 .content {
+  margin: 70px 0 0 0;
   min-height: 500px;
 }
 
