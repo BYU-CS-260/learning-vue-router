@@ -27,7 +27,7 @@
 
       <div v-else>
         <h4>Better luck next time!</h4>
-        <button type="submit">Add to Study Bank</button>
+        <button type="submit" v-on:click="addToStudyBank(question)">Add to Study Bank</button>
       </div>
 
     </div>
@@ -50,11 +50,18 @@ export default {
   created() {
     this.question = this.$root.$data.questions.find(question => question.id === parseInt(this.$route.params.id));
   },
+  computed: {
+
+  },
   methods: {
     setAnswer() {
       console.log("In setAnswer()");
       this.answered = true;
-    }
+    },
+    addToStudyBank(question) {
+      this.$root.$data.studyBank.push(question);
+      console.log(question);
+    },
   }
 }
 </script>
